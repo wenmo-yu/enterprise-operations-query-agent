@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Enterprise Operations Query Agent Preview</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #f7f1e8; color: #20201d; font-family: "Microsoft YaHei", Arial, sans-serif; }
+      .canvas { width: 1440px; min-height: 900px; display: flex; background: linear-gradient(90deg, rgba(32,32,29,.04) 1px, transparent 1px), #f7f1e8; background-size: 48px 48px; }
+      aside { width: 310px; padding: 30px 20px; background: rgba(239,230,216,.92); border-right: 1px solid rgba(32,32,29,.12); }
+      .brand { display: flex; gap: 13px; align-items: center; padding: 0 5px 25px; border-bottom: 1px solid rgba(32,32,29,.12); }
+      .mark { width: 42px; height: 42px; display: grid; place-items: center; color: white; background: #20201d; font-size: 21px; }
+      .brand strong { font-size: 18px; } .brand small, .muted { color: rgba(32,32,29,.52); }
+      .new { margin: 24px 0; width: 100%; padding: 13px; border: 0; background: #20201d; color: #fffaf1; font-weight: 700; text-align: center; }
+      .label { margin: 28px 4px 12px; color: rgba(32,32,29,.47); font-size: 11px; font-weight: 700; letter-spacing: .16em; }
+      .state { padding: 16px; background: rgba(255,255,255,.55); border: 1px solid rgba(32,32,29,.1); }
+      .row { display: flex; gap: 10px; align-items: flex-start; margin: 13px 0; font-size: 12px; } .row b { width: 42px; color: rgba(32,32,29,.55); font-weight: 400; }
+      .tag { padding: 3px 7px; margin: 0 3px 3px 0; background: rgba(47,107,79,.11); color: #2f6b4f; display: inline-block; }
+      main { flex: 1; padding: 0 72px 35px; }
+      header { height: 84px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(32,32,29,.1); }
+      header strong { font-size: 16px; } header span { display: block; font-size: 12px; color: rgba(32,32,29,.48); margin-top: 4px; }
+      .status { color: #2f6b4f; font-size: 13px; }
+      .hero { margin-top: 72px; max-width: 800px; } .pill { display: inline-block; padding: 7px 11px; color: #2f6b4f; background: rgba(47,107,79,.1); border: 1px solid rgba(47,107,79,.2); font-size: 13px; font-weight: 700; }
+      h1 { font-size: 51px; line-height: 1.12; letter-spacing: -.035em; margin: 22px 0 16px; } .hero p { font-size: 17px; color: rgba(32,32,29,.62); line-height: 1.7; max-width: 680px; }
+      .cards { display: flex; gap: 14px; margin-top: 43px; } .card { width: 31%; min-height: 140px; padding: 22px; background: rgba(255,255,255,.63); border: 1px solid rgba(32,32,29,.1); }
+      .card i { display: block; font-style: normal; color: #9a6f2d; font-size: 22px; margin-bottom: 22px; } .card b { font-size: 14px; } .card p { font-size: 12px; margin: 8px 0 0; color: rgba(32,32,29,.55); line-height: 1.5; }
+      .question { margin-top: 42px; display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; background: #fffaf1; border: 1px solid rgba(32,32,29,.14); color: rgba(32,32,29,.58); font-size: 14px; } .send { padding: 8px 13px; background: #2f6b4f; color: white; font-size: 13px; }
+      .foot { margin-top: 22px; font-size: 12px; color: rgba(32,32,29,.45); }
+    </style>
+  </head>
+  <body>
+    <div class="canvas">
+      <aside>
+        <div class="brand"><div class="mark">▥</div><div><strong>企业经营智能问数</strong><br><small>enterprise operations</small></div></div>
+        <div class="new">＋ 新会话</div>
+        <div class="label">CONTINUOUS ANALYSIS STATE</div>
+        <section class="state">
+          <div class="row"><b>指标</b><span class="tag">收入</span><span class="tag">客户数</span></div>
+          <div class="row"><b>时间</b><span class="tag">本月</span></div>
+          <div class="row"><b>维度</b><span class="tag">区域</span></div>
+          <div class="row"><b>筛选</b><span class="tag">华东</span></div>
+        </section>
+        <div class="label">RETRIEVAL PIPELINE</div>
+        <p class="muted" style="font-size:12px;line-height:1.8;padding:0 4px">Dense retrieval + Reranker<br>Value retrieval<br>Schema dependency expansion</p>
+      </aside>
+      <main>
+        <header><div><strong>企业经营智能问数 Agent</strong><span>Hybrid retrieval · Stateful analytics</span></div><div class="status">● 就绪</div></header>
+        <section class="hero">
+          <div class="pill">✦ Stateful semantic analytics</div>
+          <h1>让每一次追问，<br>都延续正确的分析上下文。</h1>
+          <p>将业务自然语言映射为可靠的 SQL：自动融合指标、时间、维度与筛选条件，并用混合检索和 Schema 依赖扩展降低语义偏差。</p>
+          <div class="cards">
+            <div class="card"><i>⌁</i><b>Dense + Reranker</b><p>Cross-Encoder 精排，动态选择召回范围。</p></div>
+            <div class="card"><i>◫</i><b>连续上下文</b><p>会话状态持续维护指标和过滤条件。</p></div>
+            <div class="card"><i>⌘</i><b>SQL 闭环</b><p>生成、校验、修正、执行全程可观测。</p></div>
+          </div>
+          <div class="question"><span>例如：统计本月各区域收入，并仅查看华东…</span><span class="send">发送 ↑</span></div>
+          <div class="foot">FastAPI SSE · LangGraph · Qdrant · Elasticsearch</div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
